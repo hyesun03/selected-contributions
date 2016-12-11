@@ -5,12 +5,15 @@
   "description": "This extension shows contributions except specific repositories.",
   "version": "1.0",
 
+  "content_scripts": [{
+    "js": ["jquery-3.1.1.min.js", "selected-graph.js"],
+    "matches": [ "http://*/*", "https://*/*" ]
+  }],
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
+    "storage"
   ]
 }
